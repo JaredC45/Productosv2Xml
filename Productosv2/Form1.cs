@@ -109,6 +109,28 @@ namespace Productosv2
             txtPrecio.Clear();
             txtCantidad.Clear();
         }
+        private bool ValidarCampos()
+        {
+            if (string.IsNullOrWhiteSpace(txtNombre.Text))
+            {
+                MessageBox.Show("El nombre del producto no puede estar vacío.");
+                return false;
+            }
+
+            if (!decimal.TryParse(txtPrecio.Text, out decimal precio) || precio < 0)
+            {
+                MessageBox.Show("El precio debe ser un número positivo.");
+                return false;
+            }
+
+            if (!int.TryParse(txtCantidad.Text, out int cantidad) || cantidad < 0)
+            {
+                MessageBox.Show("La cantidad debe ser un número entero positivo.");
+                return false;
+            }
+
+            return true;
+        }
 
 
         private void Form1_Load(object sender, EventArgs e)
