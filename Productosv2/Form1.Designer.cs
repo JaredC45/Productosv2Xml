@@ -41,21 +41,21 @@
             label3 = new Label();
             pictureBox1 = new PictureBox();
             groupBox1 = new GroupBox();
+            pictureBox5 = new PictureBox();
             label6 = new Label();
+            pictureBox4 = new PictureBox();
             pictureBox3 = new PictureBox();
             groupBox2 = new GroupBox();
             pictureBox2 = new PictureBox();
             label4 = new Label();
             label5 = new Label();
-            pictureBox4 = new PictureBox();
-            pictureBox5 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             SuspendLayout();
             // 
             // txtNombre
@@ -88,6 +88,7 @@
             btnAgregar.TabIndex = 3;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = false;
+            btnAgregar.Click += btnAgregar_Click;
             // 
             // btnMostrar
             // 
@@ -98,6 +99,7 @@
             btnMostrar.TabIndex = 4;
             btnMostrar.Text = "Mostrar";
             btnMostrar.UseVisualStyleBackColor = false;
+            btnMostrar.Click += btnMostrar_Click;
             // 
             // btnVender
             // 
@@ -108,6 +110,7 @@
             btnVender.TabIndex = 5;
             btnVender.Text = "Vender";
             btnVender.UseVisualStyleBackColor = false;
+            btnVender.Click += btnVender_Click;
             // 
             // listBoxProductos
             // 
@@ -188,6 +191,17 @@
             groupBox1.TabIndex = 11;
             groupBox1.TabStop = false;
             // 
+            // pictureBox5
+            // 
+            pictureBox5.BackColor = Color.Transparent;
+            pictureBox5.Image = Properties.Resources.download_removebg_preview__3_;
+            pictureBox5.Location = new Point(122, 263);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(52, 40);
+            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox5.TabIndex = 14;
+            pictureBox5.TabStop = false;
+            // 
             // label6
             // 
             label6.AutoSize = true;
@@ -198,6 +212,17 @@
             label6.Size = new Size(262, 17);
             label6.TabIndex = 16;
             label6.Text = "Proyecto hecho por: Giovannni y Jared";
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.BackColor = Color.Transparent;
+            pictureBox4.Image = Properties.Resources.download_removebg_preview__2_;
+            pictureBox4.Location = new Point(122, 187);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(52, 45);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 13;
+            pictureBox4.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -255,28 +280,6 @@
             label5.TabIndex = 12;
             label5.Text = "Lista de Productos";
             // 
-            // pictureBox4
-            // 
-            pictureBox4.BackColor = Color.Transparent;
-            pictureBox4.Image = Properties.Resources.download_removebg_preview__2_;
-            pictureBox4.Location = new Point(122, 187);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(52, 45);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 13;
-            pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            pictureBox5.BackColor = Color.Transparent;
-            pictureBox5.Image = Properties.Resources.download_removebg_preview__3_;
-            pictureBox5.Location = new Point(122, 263);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(52, 40);
-            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox5.TabIndex = 14;
-            pictureBox5.TabStop = false;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -289,11 +292,11 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ResumeLayout(false);
         }
 
