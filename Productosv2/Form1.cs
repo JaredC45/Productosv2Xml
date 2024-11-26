@@ -103,6 +103,13 @@ namespace Productosv2
             LimpiarCampos();
         }
 
+        private void LimpiarCampos()
+        {
+            txtNombre.Clear();
+            txtPrecio.Clear();
+            txtCantidad.Clear();
+        }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
