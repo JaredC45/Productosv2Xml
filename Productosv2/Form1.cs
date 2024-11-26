@@ -47,6 +47,21 @@ namespace Productosv2
             }
         }
 
+        private void btnMostrar_Click(object sender, EventArgs e)
+        {
+            listBoxProductos.Items.Clear();
+
+            if (productos.Count == 0)
+            {
+                MessageBox.Show("Aún no se han agregado productos.");
+                return; // Salir del método si no hay productos
+            }
+
+            foreach (var producto in productos)
+            {
+                listBoxProductos.Items.Add($"{producto.Nombre} - Precio: {producto.Precio:C} - Cantidad: {producto.Cantidad}");
+            }
+        }
 
 
         private void Form1_Load(object sender, EventArgs e)
