@@ -63,6 +63,46 @@ namespace Productosv2
             }
         }
 
+        private void btnVender_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtNombre.Text) || !int.TryParse(txtCantidad.Text, out int cantidad) || cantidad <= 0)
+            {
+                MessageBox.Show("Favor Complete las casillas para vender un producto.");
+                return;
+            }
+
+            var nombre = txtNombre.Text;
+            var productoExistente = productos.FirstOrDefault(p => p.Nombre == nombre);
+
+            if (productoExistente != null)
+            {
+                if (productoExistente.Cantidad >= cantidad)
+                {
+                    productoExistente.Cantidad -= cantidad;
+                    MessageBox.Show($"Se han vendido {cantidad} unidades del producto '{nombre}'.");
+
+
+                    if (productoExistente.Cantidad == 0)
+                    {
+                        productos.Remove(productoExistente);
+                        MessageBox.Show($"El producto '{nombre}' ha sido eliminado de la lista.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show($"No hay suficiente cantidad del producto '{nombre}' para vender.");
+                }
+            }
+            else
+            {
+                MessageBox.Show($"El producto '{nombre}' no existe en la lista.");
+            }
+
+
+            gestor.GuardarProductos(productos);
+            LimpiarCampos();
+        }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
